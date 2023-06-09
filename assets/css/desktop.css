@@ -1,0 +1,57 @@
+.wrapper {
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+}
+
+#menu {
+    height: 100vh;
+    position: fixed;
+    width: 50vw;
+    z-index: 1;
+}
+
+#logo {
+    max-width: 400px;
+}
+
+.main-content {
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50vw;
+}
+
+/* Ice cream section */
+#ice-cream {
+    
+}
+
+/* Pop tart section */
+#pop-tart {
+    
+}
+
+/* Chocolates section */
+#chocolates {
+    
+}
+
+/* Floor section */
+#floor {
+    
+}
+
+.floor {
+    background-image: url(../img/background-floor.png);
+    background-position: -50px 0;
+}
+
+@keyframes crossSky {
+    0% {
+    }
+    100% {
+        transform: translateX(calc(-50vw - 120%));
+    }
+}

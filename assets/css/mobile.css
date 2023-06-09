@@ -1,0 +1,187 @@
+.wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#menu {
+    height: 100vh;
+    width: 100%;
+}
+#logo {
+    margin: var(--unit-10) 50px;
+    max-width: 300px;
+}
+#logo > a {
+    height: fit-content;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Ice cream section */
+#ice-cream {
+    background: var(--gradient-1);
+    position: relative;
+}
+#ice-cream::after {
+    background-image: url(../img/background-stars.png);
+    background-position: top left;
+    background-size: contain;
+    content: "";
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Pop tart section */
+#pop-tart {
+    background: var(--gradient-2);
+    position: relative;
+}
+#pop-tart::after {
+    background-image: url(../img/background-stars.png);
+    background-position: top left;
+    background-size: contain;
+    content: "";
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Chocolates section */
+#chocolates {
+    background: var(--gradient-3);
+    position: relative;
+}
+#chocolates::after {
+    background-image: url(../img/background-stars.png);
+    background-position: top left;
+    background-size: contain;
+    content: "";
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Floor section */
+#floor {
+    background: var(--gradient-4);
+    position: relative;
+}
+.cloud {
+    animation: crossSky 60s linear infinite;
+    position: absolute;
+    right: -180px;
+    top: 0;
+}
+.cloud > img {
+    width: 180px;
+}
+@keyframes crossSky {
+    0% {
+    }
+    100% {
+        transform: translateX(calc(-100vw - 120%));
+    }
+}
+
+.floor {
+    background-image: url(../img/background-floor.png);
+    background-position: -50px bottom;
+    background-repeat: no-repeat;
+    background-size: 120% auto;
+    bottom: 0;
+    height: 60%;
+    position: absolute;
+    width: 100%;
+}
+
+.floor > div {
+    height: fit-content;
+    width: fit-content;
+    bottom: 0;
+    left: 50%;
+    object-fit: fill;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.floor__ice-cream-ball {
+    object-position: 10px 40px;
+    max-width: 380px;
+}
+.floor > div > div {
+    color: white;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.floor > div > div > h2 {
+    margin-bottom: 1rem;
+}
+
+
+.bandada {
+    animation: crossSky 30s linear infinite;
+    position: absolute;
+    right: -80px;
+    top: 100px;
+    height: 50px;
+    width: 80px;
+}
+.pajaro {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+.bandada > .pajaro:nth-child(1) {
+    bottom: 0;
+    left: 0;
+}
+.bandada > .pajaro:nth-child(2) {
+    top: 0;
+    left: 50%;
+}
+.bandada > .pajaro:nth-child(3) {
+    bottom: 4px;
+    left: 90%;
+}
+.cuerpo {
+    background-color: rgb(98, 98, 98);
+    border-radius: 50%;
+    height: 6px;
+    width: 24px;
+    position: absolute;
+}
+.alas {
+    background-color: rgb(98, 98, 98);
+    border-radius: 50%;
+    height: 6px;
+    width: 16px;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    transform: rotate(-45deg);
+    animation: moveWings 1s linear infinite;
+    transform-origin: bottom left;
+}
+@keyframes moveWings {
+    0% {
+      }
+    50% {
+      transform: rotate(45deg);
+    }
+    100% {
+       transform: rotate(-45deg);
+      }
+}

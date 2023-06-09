@@ -1,0 +1,200 @@
+:root {
+    --pop-corn-delay: 0.07s;
+}
+#loader {
+    animation: showLoader 2.5s linear forwards;
+    background-color: var(--light-color);
+    height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+.pop-corn-machine {
+    animation: appears 0.05s linear 0.3s forwards;
+    height: 500px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    width: 350px;
+}
+.pop-corn-machine > img {
+    height: 100%;
+    object-fit: cover;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.pop-corn-container {
+    height: 310px;
+    left: 28px;
+    position: absolute;
+    top: 30px;
+    width: 290px;
+}
+.pop-corn {
+    animation: appears 0.05s linear forwards;
+    height: 120px;
+    object-fit: cover;
+    position: absolute;
+    transform: translateY(-100%);
+    visibility: hidden;
+}
+.pop-corn.one {
+    animation-delay: calc(0.3s + var(--pop-corn-delay));
+    left: 0;
+    top: 100%;
+}
+.pop-corn.two {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 2));
+    left: 80px;
+    top: 100%;
+}
+.pop-corn.three {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 3));
+    left: 160px;
+    top: 100%;
+}
+.pop-corn.four {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 4));
+    left: 0;
+    top: 270px;
+}
+.pop-corn.five {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 5));
+    left: 80px;
+    top: 270px;
+}
+.pop-corn.six {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 6));
+    left: 160px;
+    top: 270px;
+}
+.pop-corn.seven {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 7));
+    left: 0;
+    top: 230px;
+}
+.pop-corn.eight {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 8));
+    left: 80px;
+    top: 230px;
+}
+.pop-corn.nine {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 9));
+    left: 160px;
+    top: 230px;
+}
+.pop-corn.ten {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 10));
+    left: 0;
+    top: 190px;
+}
+.pop-corn.eleven {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 11));
+    left: 80px;
+    top: 190px;
+}
+.pop-corn.twelve {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 12));
+    left: 160px;
+    top: 190px;
+}
+.pop-corn.thirteen {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 13));
+    left: 0;
+    top: 150px;
+}
+.pop-corn.fourteen {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 14));
+    left: 80px;
+    top: 150px;
+}
+.pop-corn.fifteen {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 15));
+    left: 160px;
+    top: 150px;
+}
+.pop-corn.sixteen {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 16));
+    left: 0;
+    top: 110px;
+}
+.pop-corn.seventeen {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 17));
+    left: 80px;
+    top: 110px;
+}
+.pop-corn.eighteen {
+    animation-delay: calc(0.3s + calc(var(--pop-corn-delay) * 18));
+    left: 160px;
+    top: 110px;
+}
+.loader-counter {
+    animation: loaderCounter calc(var(--pop-corn-delay) * 18) linear 0.3s forwards;
+    color: var(--light-color);
+    counter-reset: loader-counter;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 105px;
+}
+@keyframes loaderCounter {
+    0% {
+        --counter-value: 0;
+    }
+    10% {
+        --counter-value: 10;
+    }
+    20% {
+        --counter-value: 20;
+    }
+    30% {
+        --counter-value: 30;
+    }
+    40% {
+        --counter-value: 40;
+    }
+    50% {
+        --counter-value: 50;
+    }
+    60% {
+        --counter-value: 60;
+    }
+    70% {
+        --counter-value: 70;
+    }
+    80% {
+        --counter-value: 80;
+    }
+    90% {
+        --counter-value: 90;
+    }
+    100% {
+        --counter-value: 100;
+    }
+}
+.loader-counter::before {
+    content: counter(loader-counter)'%';
+    counter-increment: loader-counter var(--counter-value);
+}
+@keyframes showLoader {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes appears {
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}

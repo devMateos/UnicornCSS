@@ -85,8 +85,11 @@ a, button {
     font-family: var(--font-2);
     text-decoration: none;
 }
-section {
-    padding: var(--unit-4) var(--unit-2);
+
+
+.ltd {
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* Typography */
