@@ -90,6 +90,11 @@ section {
 }
 
 /* Typography */
+* {
+    color: var(--dark-color-1);
+    font-family: var(--font-2);
+    font-size: var(--f-size-1);
+}
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     font-family: var(--font-1);
 }
@@ -107,9 +112,6 @@ h4, .h4 {
 }
 
 p, div {
-    color: var(--dark-color-1);
-    font-family: var(--font-2);
-    font-size: var(--f-size-1);
     font-weight: 500;
 }
 
@@ -124,11 +126,26 @@ p, div {
     font-weight: bold;
 }
 
-
-/*----- BACKGROUND COLORS -----*/
+/* Background colors */
 .bg-dark {
     background-color: var(--dark-color);
 }
 .bg-light {
     background-color: var(--light-color);
+}
+
+
+/*----- CURSOR -----*/
+html {
+    cursor: url(../cursor/cursor.png), default;
+    height: 100%;
+}
+html:active {
+    cursor: url(../cursor/cursor-click.png), default;
+}
+a {
+    cursor: url(../cursor/pointer.png), pointer;
+}
+a:active {
+    cursor: url(../cursor/pointer-click.png), pointer;
 }
