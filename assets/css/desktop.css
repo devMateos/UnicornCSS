@@ -3,6 +3,9 @@
     position: fixed;
     width: 100vw;
 }
+.wrapper::-webkit-scrollbar {
+    width: 0;
+}
 
 #menu {
     height: 100vh;
