@@ -85,7 +85,9 @@ a, button {
     font-family: var(--font-2);
     text-decoration: none;
 }
-
+li {
+    list-style: none;
+}
 
 .ltd {
     margin: 0 auto;

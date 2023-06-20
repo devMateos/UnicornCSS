@@ -3,15 +3,59 @@
     overflow-x: hidden;
 }
 #menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    justify-content: space-between;
+    padding: var(--unit-10) var(--unit-5);
     width: 100%;
 }
 #logo {
-    margin: var(--unit-10) 50px;
     max-width: 300px;
 }
 #logo > a {
     height: fit-content;
+}
+
+.bubble-gum, .bubble-gum a {
+height: fit-content;
+width: fit-content;
+}
+.bubble-gum img {
+    animation: bubbleGum 1s ease-in-out infinite alternate;
+}
+.bubble-gum .shadow {
+    animation: bubbleGumShadow 1s ease-in-out infinite alternate;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0) 100%);
+    height: 12px;
+    margin: 0 auto;
+    width: 90px;
+}
+@keyframes bubbleGum {
+    100% {
+        transform: translateY(-16px);
+    }
+}
+@keyframes bubbleGumShadow {
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+.aside-info {
+    display: grid;
+    grid-template-columns: 1;
+    gap: var(--unit-4);
+}
+.aside-info > ul > p {
+    margin-bottom: var(--unit-2);
+}
+.aside-info .social {
+    display: flex;
+    gap: var(--unit-4);
+    margin-top: var(--unit-2);
 }
 
 section {
@@ -25,7 +69,7 @@ section {
     position: relative;
 }
 #ice-cream::after {
-    background-image: url(../img/background-stars.png);
+    background-image: url(../img/background-stars.webp);
     background-position: top left;
     background-size: contain;
     content: "";
@@ -42,7 +86,7 @@ section {
     position: relative;
 }
 #pop-tart::after {
-    background-image: url(../img/background-stars.png);
+    background-image: url(../img/background-stars.webp);
     background-position: top left;
     background-size: contain;
     content: "";
@@ -59,7 +103,7 @@ section {
     position: relative;
 }
 #chocolates::after {
-    background-image: url(../img/background-stars.png);
+    background-image: url(../img/background-stars.webp);
     background-position: top left;
     background-size: contain;
     content: "";
@@ -93,7 +137,7 @@ section {
 }
 
 .floor {
-    background-image: url(../img/background-floor.png);
+    background-image: url(../img/background-floor.webp);
     background-position: -50px bottom;
     background-repeat: no-repeat;
     background-size: 120% auto;

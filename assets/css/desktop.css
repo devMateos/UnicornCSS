@@ -18,6 +18,25 @@
     max-width: 400px;
 }
 
+.aside-info {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "first second fourth"
+    "first third fourth";
+}
+.aside-info > ul:nth-child(1) {
+    grid-area: first;
+}
+.aside-info > ul:nth-child(2) {
+    grid-area: second;
+}
+.aside-info > ul:nth-child(3) {
+    grid-area: third;
+}
+.aside-info > ul:nth-child(4) {
+    grid-area: fourth;
+}
+
 .main-content {
     height: fit-content;
     position: absolute;
@@ -47,7 +66,6 @@
 }
 
 .floor {
-    background-image: url(../img/background-floor.png);
     background-position: -50px 0;
 }
 
