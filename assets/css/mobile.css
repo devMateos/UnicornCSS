@@ -29,7 +29,7 @@ width: fit-content;
     animation: bubbleGumShadow 1s ease-in-out infinite alternate;
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0) 100%);
     height: 12px;
-    margin: 0 auto;
+    margin: 0 0 0 auto;
     width: 90px;
 }
 @keyframes bubbleGum {
