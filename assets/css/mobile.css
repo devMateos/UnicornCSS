@@ -3,6 +3,7 @@
     overflow-x: hidden;
 }
 
+
 /* -----MENU/ASIDE----- */
 #menu {
     align-items: center;
@@ -13,6 +14,8 @@
     padding: var(--unit-10) var(--unit-5);
     width: 100%;
 }
+
+/* Logo */
 #logo {
     max-width: 300px;
 }
@@ -20,32 +23,24 @@
     height: fit-content;
 }
 
+/* Bubble gum */
 .bubble-gum, .bubble-gum a {
 height: fit-content;
 margin-right: var(--unit-2);
 width: fit-content;
 }
 .bubble-gum img {
-    animation: bubbleGum 1s ease-in-out infinite alternate;
+    animation: float 1s ease-in-out infinite alternate;
 }
 .bubble-gum .shadow {
-    animation: bubbleGumShadow 1s ease-in-out infinite alternate;
+    animation: shadow 1s ease-in-out infinite alternate;
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0) 100%);
     height: 12px;
     margin: auto;
     width: 90px;
 }
-@keyframes bubbleGum {
-    100% {
-        transform: translateY(-16px);
-    }
-}
-@keyframes bubbleGumShadow {
-    100% {
-        transform: scale(1.2);
-    }
-}
 
+/* Aside info */
 .aside-info {
     display: grid;
     grid-template-columns: 1;
@@ -59,6 +54,7 @@ width: fit-content;
     gap: var(--unit-4);
     margin-top: var(--unit-2);
 }
+
 
 /* -----MAIN----- */
 section {
@@ -78,6 +74,7 @@ section {
     top: 0;
     width: 100%;
 }
+
 /* Ice cream section */
 #ice-cream {
     background: var(--gradient-1);
@@ -87,11 +84,12 @@ section {
     text-align: center;
 }
 #ice-cream .ice-cream-container {
-    bottom: var(--unit-5);
+    bottom: var(--unit-10);
     height: fit-content;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
+    transition: transform 1s ease-out;
     width: 130px;
     z-index: 1;
 }
@@ -107,6 +105,13 @@ section {
     position: relative;
     top: -20px;
     width: 80%;
+}
+
+#ice-cream .ice-cream-animation {
+    animation: iceCreamAnimation 1s ease-in forwards;
+}
+#ice-cream .ice-cream-animation img:nth-child(1) {
+    animation: iceCreamFalls 1.5s ease-in 1s forwards;
 }
 
 /* Pop tart section */
@@ -135,13 +140,7 @@ section {
 .cloud > img {
     width: 180px;
 }
-@keyframes crossSky {
-    0% {
-    }
-    100% {
-        transform: translateX(calc(-100vw - 120%));
-    }
-}
+
 
 .floor {
     background-image: url(../img/background-floor.webp);
@@ -227,9 +226,48 @@ section {
     animation: moveWings 1s linear infinite;
     transform-origin: bottom left;
 }
-@keyframes moveWings {
+
+
+/* -----ANIMATIONS----- */
+@keyframes float {
+    100% {
+        transform: translateY(-16px);
+    }
+}
+@keyframes shadow {
+    100% {
+        transform: scale(1.2);
+    }
+}
+@keyframes iceCreamAnimation {
+    100% {
+        transform: rotate(180deg);
+        transform-origin: 25% 85%;
+    }
+}
+@keyframes iceCreamFalls {
+    33% {
+        transform: translateY(-30px);
+    }
+    66% {
+        transform: translateY(-50vh);
+    }
+    99% {
+        transform: translateY(-200vh);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes crossSky {
     0% {
-      }
+    }
+    100% {
+        transform: translateX(calc(-100vw - 120%));
+    }
+}
+@keyframes moveWings {
     50% {
       transform: rotate(45deg);
     }
