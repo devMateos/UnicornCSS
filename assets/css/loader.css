@@ -1,3 +1,4 @@
+/* GENERAL */
 :root {
     --pop-corn-delay: 0.07s;
 }
@@ -9,6 +10,8 @@
     width: 100vw;
     z-index: 10;
 }
+
+/* POP CORN MACHINE */
 .pop-corn-machine {
     animation: appears 0.05s linear 0.3s forwards;
     height: 300px;
@@ -34,6 +37,8 @@
     top: 20px;
     width: 174px;
 }
+
+/* POP CORN */
 .pop-corn {
     animation: appears 0.05s linear forwards;
     height: 72px;
@@ -132,6 +137,8 @@
     left: 55.1%;
     top: 35%;
 }
+
+/* COUNTER */
 .loader-counter {
     animation: loaderCounter calc(var(--pop-corn-delay) * 18) linear 0.3s forwards;
     color: var(--light-color);
@@ -144,6 +151,12 @@
     transform: translateX(-50%);
     bottom: 60px;
 }
+.loader-counter::before {
+    content: counter(loader-counter)'%';
+    counter-increment: loader-counter var(--counter-value);
+}
+
+/* ANIMATIONS */
 @keyframes loaderCounter {
     0% {
         --counter-value: 0;
@@ -178,10 +191,6 @@
     100% {
         --counter-value: 100;
     }
-}
-.loader-counter::before {
-    content: counter(loader-counter)'%';
-    counter-increment: loader-counter var(--counter-value);
 }
 @keyframes showLoader {
     80% {

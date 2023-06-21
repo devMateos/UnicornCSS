@@ -37,6 +37,8 @@
     grid-area: fourth;
 }
 
+
+/* -----MAIN----- */
 .main-content {
     height: fit-content;
     position: absolute;
@@ -44,10 +46,27 @@
     top: 0;
     width: 50vw;
 }
+section {
+    padding: var(--unit-10);
+}
 
 /* Ice cream section */
-#ice-cream {
-    
+#ice-cream::before {
+    background-image: url(../svg/arrow-down.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: var(--unit-10);
+    color: var(--light-color);
+    content: "SCROLL DOWN";
+    position: absolute;
+    right: var(--unit-10);
+    text-orientation: upright;
+    width: 50px;
+    writing-mode: vertical-lr;
+}
+#ice-cream h1 {
+    text-align: end;
 }
 
 /* Pop tart section */
