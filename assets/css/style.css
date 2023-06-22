@@ -96,7 +96,7 @@ li {
 
 /* Typography */
 * {
-    color: var(--dark-color-1);
+    color: var(--dark-color);
     font-family: var(--font-2);
     font-size: var(--f-size-1);
 }

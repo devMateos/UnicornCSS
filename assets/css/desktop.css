@@ -70,10 +70,13 @@ section {
 }
 
 /* Pop tart section */
-#pop-tart {
-    
+#pop-tart .pop-tart-background {
+    height: clamp(400px, 50%, 700px);
+    width: clamp(300px, 40%, 500px);
 }
-
+#pop-tart .pop-tart-text {
+    left: 50%;
+}
 /* Chocolates section */
 #chocolates {
     
