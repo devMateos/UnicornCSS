@@ -18,7 +18,9 @@ wrapper.addEventListener('scroll', iceCreamFalls);
 const chocolateCards = document.querySelectorAll(".chocolate-card");
 
 for (let i = 0; i < chocolateCards.length; i++) {
-    chocolateCards[i].addEventListener("click", () => {
-        chocolateCards[i].classList.toggle("rotate");
-    });
+    if (!chocolateCards[i].classList.contains("biten")) {
+        chocolateCards[i].addEventListener("click", () => {
+            chocolateCards[i].classList.toggle("rotate");
+        });
+    }
 }

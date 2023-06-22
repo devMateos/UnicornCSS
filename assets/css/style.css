@@ -184,11 +184,12 @@ a:active, .chocolate-card:active {
     font-family: var(--font-2);
 }
 .chocolate-card .face {
-    backface-visibility: hidden;
     align-items: center;
+    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: space-around;
     position: absolute;
     width: 100%;
 }
@@ -196,12 +197,26 @@ a:active, .chocolate-card:active {
     background-color: var(--chocolate-bg);
     border: solid var(--unit-5) var(--chocolate-border);
 }
+.chocolate-card .face.front img {
+    width: 6.5rem;
+}
 .chocolate-card .face.front:hover {
     transform: rotate(2deg);
 }
 .chocolate-card .face.back {
     background-color: var(--chocolate-border);
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+}
+.chocolate-card .face.back ul li {
+    margin: var(--unit-2) 0;
+    max-width: 125px;
+    text-align: center;
+}
+
+.chocolate-card.biten {
+    background-image: url(../svg/biten-chocolate.svg);
+    background-position: cover;
+    background-repeat: no-repeat;
 }
 .rotate {
     transform: rotateY(180deg);
