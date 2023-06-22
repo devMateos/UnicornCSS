@@ -1,5 +1,5 @@
+/* ICE CREAM ANIMATION */
 const wrapper = document.querySelector(".wrapper");
-
 
 function iceCreamFalls() {
     let iceCreamContainer = document.querySelector('.ice-cream-container');
@@ -13,3 +13,12 @@ function iceCreamFalls() {
 window.addEventListener('scroll', iceCreamFalls);
 wrapper.addEventListener('scroll', iceCreamFalls);
 
+
+/* CHOCOLATE CARDS */
+const chocolateCards = document.querySelectorAll(".chocolate-card");
+
+for (let i = 0; i < chocolateCards.length; i++) {
+    chocolateCards[i].addEventListener("click", () => {
+        chocolateCards[i].classList.toggle("rotate");
+    });
+}

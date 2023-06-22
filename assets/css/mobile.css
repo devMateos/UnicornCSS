@@ -120,8 +120,8 @@ section {
     position: relative;
 }
 #pop-tart .pop-tart-background {
-    background-color: #F7A930;
-    border: solid var(--unit-1) #DA8A27;
+    background-color: var(--pop-tart-bg);
+    border: solid var(--unit-1) var(--pop-tart-border);
     border-radius: var(--unit-2);
     height: clamp(300px, 50%, 500px);
     left: 50%;
@@ -159,6 +159,10 @@ section {
 #chocolates {
     background: var(--gradient-3);
     position: relative;
+}
+#chocolates h2 {
+    margin-bottom: var(--unit-6);
+    text-align: center;
 }
 
 /* Floor section */

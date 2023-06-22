@@ -41,7 +41,10 @@
     --gray-color: #B5B4B4;
     --accent-color-1: #F387BD;
     --accent-color-2: #E81980;
-    --alt-color: #F7A930;
+    --pop-tart-bg: #F7A930;
+    --pop-tart-border: #DA8A27;
+    --chocolate-bg: #A35E09;
+    --chocolate-border: #784608;
 
     /* gradients */
     --gradient-1: linear-gradient(180deg, #3E3176 62.67%, #EB00FF 100%);
@@ -148,9 +151,58 @@ html {
 html:active {
     cursor: url(../cursor/cursor-click.png), default;
 }
-a {
+a, .chocolate-card {
     cursor: url(../cursor/pointer.png), pointer;
 }
-a:active {
+a:active, .chocolate-card:active {
     cursor: url(../cursor/pointer-click.png), pointer;
+}
+
+/*----- GRID -----*/
+.primary-grid {
+    align-items: center;
+    gap: var(--unit-5);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+/*----- COMPONENTS -----*/
+/* Chocolate card */
+.chocolate-card {
+    height: 210px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+    width: 175px;
+    z-index: 1;
+}
+.chocolate-card * {
+    color: var(--light-color);
+    font-family: var(--font-2);
+}
+.chocolate-card .face {
+    backface-visibility: hidden;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.chocolate-card .face.front {
+    background-color: var(--chocolate-bg);
+    border: solid var(--unit-5) var(--chocolate-border);
+}
+.chocolate-card .face.front:hover {
+    transform: rotate(2deg);
+}
+.chocolate-card .face.back {
+    background-color: var(--chocolate-border);
+    transform: rotateX(180deg);
+}
+.rotate {
+    transform: rotateY(180deg);
 }
