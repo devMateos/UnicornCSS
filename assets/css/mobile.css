@@ -11,7 +11,7 @@
     flex-direction: column;
     height: 100vh;
     justify-content: space-between;
-    padding: var(--unit-10) var(--unit-5);
+    padding: var(--unit-10) var(--unit-10);
     width: 100%;
 }
 
@@ -44,7 +44,8 @@ width: fit-content;
 .aside-info {
     display: grid;
     grid-template-columns: 1;
-    gap: var(--unit-4);
+    row-gap: var(--unit-4);
+    width: 80%;
 }
 .aside-info > ul > p {
     margin-bottom: var(--unit-2);
@@ -148,10 +149,15 @@ section {
     display: flex;
     flex-direction: column;
     gap: var(--unit-4);
-    left: 47%;
+    left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: max-content;
+}
+#pop-tart .pop-tart-text > * {
+    color: var(--pop-tart-border);
+    text-shadow: 1px 1px var(--dark-color);
 }
 
 
@@ -183,9 +189,9 @@ section {
 
 .floor {
     background-image: url(../img/background-floor.webp);
-    background-position: -50px bottom;
+    background-position: -50px top;
     background-repeat: no-repeat;
-    background-size: 120% auto;
+    background-size: auto auto;
     bottom: 0;
     height: 60%;
     left: 0;

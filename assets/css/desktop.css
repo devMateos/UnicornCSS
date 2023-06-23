@@ -19,6 +19,7 @@
 }
 
 .aside-info {
+    column-gap: var(--unit-10);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     "first second fourth"
@@ -35,6 +36,9 @@
 }
 .aside-info > ul:nth-child(4) {
     grid-area: fourth;
+}
+.aside-info > ul:nth-child(5) {
+    grid-area: fifth;
 }
 
 
@@ -75,19 +79,6 @@ section {
     width: clamp(300px, 40%, 500px);
 }
 
-/* Chocolates section */
-#chocolates {
-    
-}
-
-/* Floor section */
-#floor {
-    
-}
-
-.floor {
-    background-position: -50px 0;
-}
 
 @keyframes crossSky {
     0% {
