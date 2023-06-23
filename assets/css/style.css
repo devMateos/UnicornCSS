@@ -218,6 +218,13 @@ a:active, .chocolate-card:active {
     background-position: cover;
     background-repeat: no-repeat;
 }
+.chocolate-card.biten p {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transform: rotate(-45deg) translate(35%, -55%);
+}
 .rotate {
     transform: rotateY(180deg);
 }
